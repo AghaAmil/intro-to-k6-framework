@@ -13,9 +13,12 @@ export const options = {
 
 
     */
-    { duration: "10s", target: 10 }, // target: the number target vus
-    { duration: "30s", target: 10 },
-    { duration: "10s", target: 0 },
+    // Ramp-up stage
+    { duration: "10s", target: 10 }, // Ramp up to 10 users over 5 minutes
+    // Steady state stage
+    { duration: "30s", target: 10 }, // Stay at 10 users for 30 minutes
+    // Ramp-down stage
+    { duration: "10s", target: 0 }, // Ramp down to 0 users over 5 minutes
   ],
 };
 
@@ -23,7 +26,7 @@ export default function () {
   http.get("https://test.k6.io");
   sleep(1);
   http.get("https://test.k6.io/contacts.php");
-  sleep(2);
+  sleep(1);
   http.get("https://test.k6.io/news.php");
-  sleep(2);
+  sleep(1);
 }
