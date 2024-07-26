@@ -14,11 +14,11 @@ export const options = {
 
     */
     // Ramp-up stage
-    { duration: "10s", target: 1000 }, // Ramp up to 1000 users over 5 minutes
+    { duration: "10s", target: 1000 }, // Ramp up to 1000 users over 10 seconds
     // Steady state stage
-    { duration: "30s", target: 1000 }, // Stay at 1000 users for 30 minutes
+    { duration: "30s", target: 1000 }, // Stay at 1000 users for 30 seconds
     // Ramp-down stage
-    { duration: "10s", target: 0 }, // Ramp down to 0 users over 5 minutes
+    { duration: "10s", target: 0 }, // Ramp down to 0 users over 10 seconds
   ],
 };
 
