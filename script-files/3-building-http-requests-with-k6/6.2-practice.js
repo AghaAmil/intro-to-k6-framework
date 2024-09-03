@@ -1,4 +1,5 @@
 import http from "k6/http";
+import { check } from "k6";
 
 export default function () {
   // creating the body of API request
@@ -48,5 +49,11 @@ export default function () {
     },
   });
 
+  let obtainedCrocodileId = resGetCrocodile.json().id;
   console.log(resGetCrocodile.json());
+
+  check(resGetCrocodile, {
+    "Status Code is 200": (r) => r.status === 200,
+    "Crocodile ID is Correct": (r) => r.json().id === obtainedCrocodileId,
+  });
 }
