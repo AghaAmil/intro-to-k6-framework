@@ -9,6 +9,10 @@ export default function () {
 
   res = http.get(`https://test-api.k6.io/public/crocodiles/${crocodileId}/`);
 
+  console.log(res.headers.Allow); // getting Allow in response header
+  console.log(res.headers["Content-Type"]); // getting Content-Type in response header
+  // console.log(res.headers.Content-Type); causing JS syntax error
+
   check(res, {
     "Status is 200": (r) => r.status === 200,
     "Crocodile's name ": (r) => r.json().name === crocodileName,
