@@ -24,7 +24,7 @@ When the script above is executed, k6 will simulate 10 virtual users over a peri
 
 The terminal output from the test execution is displayed below:
 
-```vbnet
+```
 execution: local
 script: first-script.js
 scenarios: (100.00%) 1 scenario, 10 max VUs, 40s max duration (incl. graceful stop):

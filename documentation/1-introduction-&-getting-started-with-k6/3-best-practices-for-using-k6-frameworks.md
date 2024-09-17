@@ -27,4 +27,3 @@ Before starting any test, it's vital to have a thorough understanding of the app
 ## Final Thoughts
 
 The k6 framework is a powerful tool for performance testing, but with great power comes great responsibility. Always use it thoughtfully, maintain clear communication with stakeholders, and ensure that testing is conducted in environments designed to handle the load without causing unintended disruption.
-ving the conversational tone of a lecture.

@@ -1,6 +1,4 @@
-## Basic Performance Testing Concepts
-
-![alt text](../images/SCR-20240910-nmgo.png)
+![alt](../images/pic1.png)
 
 When analyzing a k6 test execution report, it can initially seem overwhelming. To make sense of it, let’s go over some fundamental concepts that are key to understanding performance testing with k6.
 

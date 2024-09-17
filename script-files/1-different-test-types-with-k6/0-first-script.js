@@ -1,14 +1,13 @@
 import http from "k6/http";
 import { sleep } from "k6";
 
-// setting a configuration for load test
+// Configuration for the load test
 export const options = {
-  vus: 10, // number of virtual users
-  duration: "10s", // load test duration
+  vus: 10,           // Number of virtual users
+  duration: "10s",    // Duration of the load test
 };
 
 export default function () {
-  http.get("https://test.k6.io");
-  // pausing after a request is sent
-  sleep(1); // pauses for 1 second
+  http.get("https://test.k6.io");  // HTTP GET request to test endpoint
+  sleep(1);  // Pauses for 1 second between requests
 }
