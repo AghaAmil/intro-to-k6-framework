@@ -1,13 +1,18 @@
 import http from "k6/http";
-import { check } from "k6";
+import {check} from "k6";
 
 export default function () {
   const res = http.get("https://test.k6.io");
 
-  // inserting an assertion
-  //   check(true, {
-  //     "Check True or False": (value) => value === true,
-  //   });
+  // sample assertion structure
+
+//  check (true, {
+//    'true is true': (value) => value === true
+//  });
+//
+//  check (false, {
+//    'true is true': (value) => value === true
+//  });
 
   // inserting an assertion for request status code
   check(res, {
